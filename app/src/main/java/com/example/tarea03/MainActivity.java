@@ -43,13 +43,13 @@ public class MainActivity extends AppCompatActivity {
                 //Creando array con datos de los restaurantes
                 Restaurante[] restaurant_arr = restaurantes.getRestaurantes();
                 //De cada objeto restaurante en el array se realiza una acción
-                for (Restaurante r : restaurant_arr) {
+                /*for (Restaurante r : restaurant_arr) {
                     valores += "Nombre:" + r.getNombre() + "\n" +
                             "Horarios:" + r.getHorarios() + "\n" +
                             "Categoría:" + r.getCategoria() + "\n" +
                             "Foto:" + r.getFoto() + "\n" +
                             "Teléfono:" + r.getTelefono() + "\n\n";
-                }
+                }*/
 
 
 
