@@ -1,11 +1,14 @@
 package com.example.tarea03;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tarea03.Adaptadores.adt_datos;
 import com.example.tarea03.Interfaces.int_restaurantes;
 import com.example.tarea03.Modelos.Restaurantes;
 import com.example.tarea03.Modelos.Restaurantes.*;
@@ -17,6 +20,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
+
+    RecyclerView rclVista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,17 +48,10 @@ public class MainActivity extends AppCompatActivity {
                 //Creando array con datos de los restaurantes
                 Restaurante[] restaurant_arr = restaurantes.getRestaurantes();
                 //De cada objeto restaurante en el array se realiza una acción
-                /*for (Restaurante r : restaurant_arr) {
-                    valores += "Nombre:" + r.getNombre() + "\n" +
-                            "Horarios:" + r.getHorarios() + "\n" +
-                            "Categoría:" + r.getCategoria() + "\n" +
-                            "Foto:" + r.getFoto() + "\n" +
-                            "Teléfono:" + r.getTelefono() + "\n\n";
-                }*/
-
-
-
-
+                rclVista = (RecyclerView) findViewById(R.id.rclVista);
+                rclVista.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false));
+                adt_datos adaptador = new adt_datos(restaurant_arr);
+                rclVista.setAdapter(adaptador);
             }
 
             @Override
