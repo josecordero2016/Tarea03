@@ -16,7 +16,7 @@ public class Restaurantes {
     }
 
     public class Restaurante{
-        private int id;
+        private String id;
         private String nombre;
         private String horarios;
         private String telefono;
@@ -24,7 +24,7 @@ public class Restaurantes {
         private String categoria;
         private String foto;
 
-        public Restaurante(int id, String nombre, String horarios, String telefono, String direccion, String categoria, String foto) {
+        public Restaurante(String id, String nombre, String horarios, String telefono, String direccion, String categoria, String foto) {
             this.id = id;
             this.nombre = nombre;
             this.horarios = horarios;
@@ -34,11 +34,11 @@ public class Restaurantes {
             this.foto = foto;
         }
 
-        public int getId() {
+        public String getId() {
             return id;
         }
 
-        public void setId(int id) {
+        public void setId(String id) {
             this.id = id;
         }
 

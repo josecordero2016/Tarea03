@@ -11,6 +11,6 @@ public interface int_restaurantes {
             "secret-key: $2b$10$XMPGhDI648HghIgRqs8jGeh6kJr9zUMz6AXhUuGaSZtuI9WqqaBw2"
     })
 
-    @GET("b/5efe7a287f16b71d48aa3b09")
+    @GET("b/5efe7a287f16b71d48aa3b09/2")
     Call<Restaurantes> getRestaurantes();
 }
